@@ -1,5 +1,5 @@
-import ManageLaboratory from '../ManageLaboratory/ManageLaboratory'
-import Sidebar from '../Sidebar/Sidebar'
+import ManageLaboratory from './ManageLaboratory'
+import Sidebar from '../../Components/Sidebar/Sidebar'
 
 export default function Merge(){
     return (

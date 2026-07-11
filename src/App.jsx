@@ -5,7 +5,7 @@
 // import './App.css'
 //import Login from "./Components/Login/Login";
 //import Sidebar from './Components/Sidebar/Sidebar'
-import Merge from "./Components/ManageLaboratory/Merge";
+//import Merge from "./Components/ManageLaboratory/Merge";
 
 function App() {
   return (
