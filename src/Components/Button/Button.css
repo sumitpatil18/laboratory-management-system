@@ -1,0 +1,54 @@
+button{
+    width:220px;
+    height:42px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+
+    background:linear-gradient(90deg,#c31432,#240b36);
+
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+
+    transition:all .3s ease;
+}
+
+/* Hover */
+
+button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 22px rgba(36,11,54,.28);
+
+}
+
+/* Click */
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+/* Focus */
+
+button:focus{
+
+    outline:none;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    button{
+
+        width:100%;
+        font-size:18px;
+
+    }
+
+}
