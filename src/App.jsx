@@ -1,3 +1,4 @@
+import {Routes, Route} from "react-router-dom";
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from './assets/vite.svg'
@@ -13,9 +14,14 @@ import CreateLaboratory from "./Pages/CreateLaboratory/CreateLaboratory";
 
 function App() {
   return (
-    <>
-      <CreateLaboratory/>
-    </>
+    <Routes>
+        <Route
+        path="/"
+        element={<CreateLaboratory/>}
+       />
+
+    </Routes>
+
   );
 }
 

@@ -4,12 +4,17 @@ import Sidebar from "../../Components/Sidebar/Sidebar";
 import Card from "../../Components/Card/Card";
 import Inputfield from "../../Components/InputField/Inputfield";
 import Button from "../../Components/Button/Button";
+import { adminSidebarItem } from "../../Data/sidebarMenu";
 
 export default function CreateLaboratory() {
+
+        
+
     return (
         <div className="page">
 
-            <Sidebar />
+            
+            <Sidebar menuItems={adminSidebarItem}/>
 
             <div className="content">
 

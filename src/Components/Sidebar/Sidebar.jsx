@@ -1,6 +1,7 @@
 import "./Sidebar.css";
+import { NavLink } from "react-router-dom"; 
 
-function Sidebar() {
+function Sidebar({menuItems}) {
   return (
     <div className="sidebar">
 
@@ -12,25 +13,39 @@ function Sidebar() {
 
       {/* Menu */}
       <ul className="menu"> 
-        <li>
-          <a href="#">Manage Laboratories</a>
+        {menuItems.map((item,index)=>(
+            <li key={index}>
+
+                <NavLink to={item.path}
+                className={({isActive})=>
+                  isActive ? "active-link" : ""
+                }
+                >
+                  {item.title}
+                </NavLink>
+                
+            </li>
+
+        ))}
+        {/* <li>
+          <a href="#">{mngLabo}</a>
         </li>
 
         <li>
-          <a href="#">Create Laboratory</a>
+          <a href="#">{crtLabo}</a>
         </li>
 
         <li>
-          <a href="#">Monitor Data</a>
+          <a href="#">{mntrData}</a>
         </li>
 
         <li>
-          <a href="#">Staff Manage</a>
+          <a href="#">{stfMng}</a>
         </li>
 
         <li className="logout">
-          <a href="#">Logout</a>
-        </li>
+          <a href="#">{logout}</a>
+        </li> */}
 
       </ul>
 
