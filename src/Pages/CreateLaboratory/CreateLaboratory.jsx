@@ -12,7 +12,6 @@ export default function CreateLaboratory() {
 
     return (
         <div className="page">
-
             
             <Sidebar menuItems={adminSidebarItem}/>
 

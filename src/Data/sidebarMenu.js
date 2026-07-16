@@ -1,7 +1,7 @@
 export const adminSidebarItem=[
             {
                 title:"Manage Laboratories",
-                path:"/managelaboratory"
+                path:"/"
             },
             {
                 title:"Create Laboratory",

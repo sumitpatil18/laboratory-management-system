@@ -27,25 +27,6 @@ function Sidebar({menuItems}) {
             </li>
 
         ))}
-        {/* <li>
-          <a href="#">{mngLabo}</a>
-        </li>
-
-        <li>
-          <a href="#">{crtLabo}</a>
-        </li>
-
-        <li>
-          <a href="#">{mntrData}</a>
-        </li>
-
-        <li>
-          <a href="#">{stfMng}</a>
-        </li>
-
-        <li className="logout">
-          <a href="#">{logout}</a>
-        </li> */}
 
       </ul>
 
