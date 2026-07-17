@@ -149,3 +149,23 @@ export const testNames=[
         info:"OPPREATIVE PROFILE"
     },
 ];
+
+export const selectStatus=[
+
+    {
+        value:"Select Status",
+        info:"Select Status"
+    },
+    {
+        value:"Completed",
+        info:"Completed"
+    },
+    {
+        value:"Pending",
+        info:"Pending"
+    },
+    {
+        value:"Processing",
+        info:"Processing"
+    }
+];

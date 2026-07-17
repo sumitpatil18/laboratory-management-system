@@ -8,6 +8,8 @@ import SelectionList from "../../Components/SelectionList/SelectionList";
 import { testNames } from "../../Data/SelectionList";
 import DatePicker from "../../Components/DatePicker/DatePicker";
 import { useState } from "react";
+import { selectStatus } from "../../Data/SelectionList";
+import Button from "../../Components/Button/Button";
 
 export default function Dashbord() {
   const [date,setDate]=useState("")
@@ -25,6 +27,10 @@ export default function Dashbord() {
           value={date}
           onChange={(e)=>setDate(e.target.value)}
           />
+          <SelectionList menuItems={selectStatus}/>
+          <Button type="button" info="Search"/>
+          
+          
         </Card>
       </div>
     </>

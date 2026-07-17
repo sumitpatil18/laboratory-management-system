@@ -1,54 +1,83 @@
+/* ==========================================
+   BUTTON
+========================================== */
+
 button{
-    width:220px;
-    height:42px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
 
-    background:linear-gradient(90deg,#c31432,#240b36);
+    border: none;
 
-    color:#fff;
-    font-size:14px;
-    font-weight:600;
+    border-radius: 10px;
 
-    transition:all .3s ease;
+    background: linear-gradient(90deg, #c31432, #240b36);
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-sizing: border-box;
+
+    user-select: none;
+
 }
 
-/* Hover */
+/* ==========================================
+   HOVER
+========================================== */
 
 button:hover{
 
-    transform:translateY(-2px);
+    transform: translateY(-2px);
 
-    box-shadow:0 12px 22px rgba(36,11,54,.28);
+    box-shadow: 0 10px 24px rgba(36, 11, 54, 0.25);
 
 }
 
-/* Click */
+/* ==========================================
+   ACTIVE
+========================================== */
 
 button:active{
 
-    transform:scale(.98);
+    transform: scale(0.98);
 
 }
 
-/* Focus */
+/* ==========================================
+   FOCUS
+========================================== */
 
 button:focus{
 
-    outline:none;
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px rgba(195, 20, 50, 0.18),
+        0 10px 24px rgba(36, 11, 54, 0.20);
 
 }
 
-/* Mobile */
+/* ==========================================
+   DISABLED
+========================================== */
 
-@media(max-width:768px){
+button:disabled{
 
-    button{
+    background: #d1d5db;
 
-        width:100%;
-        font-size:18px;
+    color: #6b7280;
 
-    }
+    cursor: not-allowed;
+
+    box-shadow: none;
+
+    transform: none;
 
 }
