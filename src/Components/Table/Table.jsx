@@ -34,11 +34,9 @@ const laboratories = [
   },
 ];
 
-const Table = ({title,subTitle}) => {
+const Table = ({ title, subTitle }) => {
   return (
-    
-    <div className="manage-laboratory"> 
-
+    <div className="manage-laboratory">
       {/* Header */}
 
       <div className="page-header">
@@ -47,30 +45,20 @@ const Table = ({title,subTitle}) => {
           <p>{subTitle}</p>
         </div>
 
-        <button className="add-btn">
-          + Add Laboratory
-        </button>
+        <button className="add-btn">+ Add Laboratory</button>
       </div>
 
       {/* Search */}
 
       <div className="search-section">
-
-        <input
-          type="text"
-          placeholder="Search laboratory..."
-        />
-
+        <input type="text" placeholder="Search laboratory..." />
       </div>
 
       {/* Table */}
 
       <div className="table-container">
-
         <table>
-
           <thead>
-
             <tr>
               <th>ID</th>
               <th>Laboratory Name</th>
@@ -82,15 +70,11 @@ const Table = ({title,subTitle}) => {
               <th>Status</th>
               <th>Actions</th>
             </tr>
-
           </thead>
 
           <tbody>
-
             {laboratories.map((lab) => (
-
               <tr key={lab.id}>
-                
                 <td>{lab.id}</td>
 
                 <td>{lab.name}</td>
@@ -118,27 +102,15 @@ const Table = ({title,subTitle}) => {
                 </td>
 
                 <td>
+                  <button className="edit-btn">Edit</button>
 
-                  <button className="edit-btn">
-                    Edit
-                  </button>
-
-                  <button className="delete-btn">
-                    Delete
-                  </button>
-
+                  <button className="delete-btn">Delete</button>
                 </td>
-
               </tr>
-
             ))}
-
           </tbody>
-
         </table>
-
       </div>
-
     </div>
   );
 };

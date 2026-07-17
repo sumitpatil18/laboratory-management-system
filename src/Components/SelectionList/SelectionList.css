@@ -1,0 +1,76 @@
+/* ==========================================
+   SELECTION LIST
+========================================== */
+
+select {
+    width: 100%;
+    height: 46px;
+    padding: 0 16px;
+    border: 1px solid #d8dee9;
+    border-radius: 10px;
+    background: #ffffff;
+
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    color: #2f3640;
+
+    outline: none;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    /* Remove default browser style */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* Custom dropdown arrow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 5.5L8 12l6.5-6.5' stroke='%23666' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+}
+
+/* ==========================================
+   PLACEHOLDER OPTION
+========================================== */
+
+select option:first-child {
+    color: #8b95a5;
+}
+
+/* ==========================================
+   OPTIONS
+========================================== */
+
+select option {
+    color: #2f3640;
+    background: #ffffff;
+}
+
+/* ==========================================
+   HOVER
+========================================== */
+
+select:hover {
+    border-color: #b8c2d3;
+}
+
+/* ==========================================
+   FOCUS
+========================================== */
+
+select:focus {
+    border-color: #c31432;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+
+/* ==========================================
+   DISABLED
+========================================== */
+
+select:disabled {
+    background: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+}

@@ -1,15 +1,9 @@
 import Inputfield from "../InputField/inputfield";
-import Button from "../Button/Button"
+import Button from "../Button/Button";
 import "./Card.css";
 
 const Card = ({ children }) => {
-  return (
-    <div className="custom-card">
-      {children}
-    
-      
-    </div>
-  );
+  return <div className="custom-card">{children}</div>;
 };
 
 export default Card;

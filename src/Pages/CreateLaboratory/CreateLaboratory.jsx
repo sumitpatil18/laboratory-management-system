@@ -7,114 +7,82 @@ import Button from "../../Components/Button/Button";
 import { adminSidebarItem } from "../../Data/sidebarMenu";
 
 export default function CreateLaboratory() {
+  return (
+    <div className="page">
+      <Sidebar menuItems={adminSidebarItem} />
 
-        
+      <div className="content">
+        <h1>Create Laboratory Account</h1>
 
-    return (
-        <div className="page">
-            
-            <Sidebar menuItems={adminSidebarItem}/>
+        <p className="subtitle">Add and manage laboratory accounts easily.</p>
 
-            <div className="content">
+        <Card>
+          {/* Row 1 */}
+          <div className="form-row two-column">
+            <Inputfield
+              label="Laboratory Name"
+              type="text"
+              placeholder="Enter Laboratory Name"
+            />
 
-                <h1>Create Laboratory Account</h1>
+            <Inputfield
+              label="Email Address"
+              type="email"
+              placeholder="Enter Email Address"
+            />
+          </div>
 
-                <p className="subtitle">
-                    Add and manage laboratory accounts easily.
-                </p>
+          {/* Row 2 */}
 
-                <Card>
+          <div className="form-row two-column">
+            <Inputfield
+              label="Phone Number"
+              type="tel"
+              placeholder="Enter Phone Number"
+            />
 
-                    {/* Row 1 */}
-                    <div className="form-row two-column">
+            <Inputfield
+              label="Username"
+              type="text"
+              placeholder="Enter Username"
+            />
+          </div>
 
-                        <Inputfield
-                            label="Laboratory Name"
-                            type="text"
-                            placeholder="Enter Laboratory Name"
-                        />
+          {/* Row 3 */}
 
-                        <Inputfield
-                            label="Email Address"
-                            type="email"
-                            placeholder="Enter Email Address"
-                        />
+          <div className="form-row three-column">
+            <Inputfield label="City" type="text" placeholder="Enter City" />
 
-                    </div>
+            <Inputfield label="Taluka" type="text" placeholder="Enter Taluka" />
 
-                    {/* Row 2 */}
+            <Inputfield
+              label="District"
+              type="text"
+              placeholder="Enter District"
+            />
+          </div>
 
-                    <div className="form-row two-column">
+          {/* Row 4 */}
 
-                        <Inputfield
-                            label="Phone Number"
-                            type="tel"
-                            placeholder="Enter Phone Number"
-                        />
+          <div className="form-row two-column">
+            <Inputfield
+              label="Password"
+              type="password"
+              placeholder="Enter Password"
+            />
 
-                        <Inputfield
-                            label="Username"
-                            type="text"
-                            placeholder="Enter Username"
-                        />
+            <Inputfield
+              label="Confirm Password"
+              type="password"
+              placeholder="Confirm Password"
+            />
+          </div>
 
-                    </div>
-
-                    {/* Row 3 */}
-
-                    <div className="form-row three-column">
-
-                        <Inputfield
-                            label="City"
-                            type="text"
-                            placeholder="Enter City"
-                        />
-
-                        <Inputfield
-                            label="Taluka"
-                            type="text"
-                            placeholder="Enter Taluka"
-                        />
-
-                        <Inputfield
-                            label="District"
-                            type="text"
-                            placeholder="Enter District"
-                        />
-
-                    </div>
-
-                    {/* Row 4 */}
-
-                    <div className="form-row two-column">
-
-                        <Inputfield
-                            label="Password"
-                            type="password"
-                            placeholder="Enter Password"
-                        />
-
-                        <Inputfield
-                            label="Confirm Password"
-                            type="password"
-                            placeholder="Confirm Password"
-                        />
-
-                    </div>
-
-                    <div className="button-area">
-
-                        <Button
-                            type="submit"
-                            info="Create Laboratory"
-                        />
-
-                    </div>
-
-                </Card>
-
-            </div>
-
-        </div>
-    );
+          <div className="button-area">
+            <Button type="submit" info="Create Laboratory" />
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
 }

@@ -1,4 +1,4 @@
-import {Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from './assets/vite.svg'
@@ -6,33 +6,24 @@ import {Routes, Route} from "react-router-dom";
 // import './App.css'
 //import Login from "./Components/Login/Login";
 //import Merge from "./Pages/ManageLaboratory/Merge";
-import CreateLaboratory from "./Pages/CreateLaboratory/CreateLaboratory";
-import ManageLaboratory from "./Pages/ManageLaboratory/ManageLaboratory"
-import Sidebar from "./Components/Sidebar/Sidebar";
-import StaffManage from "./Pages/StaffManage/StaffManage";
+//import CreateLaboratory from "./Pages/CreateLaboratory/CreateLaboratory";
+//import ManageLaboratory from "./Pages/ManageLaboratory/ManageLaboratory";
+//import Sidebar from "./Components/Sidebar/Sidebar";
+//import StaffManage from "./Pages/StaffManage/StaffManage";
+import Dashbord from "./Pages/Dashbord/Dashbord";
 
 function App() {
   return (
-    <Routes>
+    // <Routes>
+    //   <Route path="/" element={<ManageLaboratory />} />
 
-      <Route 
-       path="/"
-       element={<ManageLaboratory/>}
-      />
+    //   <Route path="createLaboratory" element={<CreateLaboratory />} />
 
-      <Route
-        path="createLaboratory"
-        element={<CreateLaboratory/>}
-      />
-      
-      <Route
-      path="/staffManage"
-      element={<StaffManage/>}
-      />
-    </Routes>
+    //   <Route path="/staffManage" element={<StaffManage />} />
+    // </Routes>
 
+    <Dashbord/>
   );
 }
 
-
-export default App
+export default App;

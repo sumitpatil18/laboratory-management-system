@@ -1,0 +1,112 @@
+/* ==========================================
+   DATE PICKER CONTAINER
+========================================== */
+
+.date-picker{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================
+   DATE INPUT
+========================================== */
+
+.date-picker input{
+    height: 46px;
+
+    padding: 0 16px;
+
+    border: 1px solid #d8dee9;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #1f2937;
+
+    font-size: 15px;
+
+    font-family: "Poppins", sans-serif;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+}
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.date-picker input:hover{
+    border-color: #b8c2d3;
+}
+
+/* ==========================================
+   FOCUS
+========================================== */
+
+.date-picker input:focus{
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ==========================================
+   CALENDAR ICON
+========================================== */
+
+.date-picker input::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+
+    opacity: 0.75;
+
+    transition: opacity 0.3s ease;
+}
+
+.date-picker input::-webkit-calendar-picker-indicator:hover{
+    opacity: 1;
+}
+
+/* ==========================================
+   DISABLED
+========================================== */
+
+.date-picker input:disabled{
+    background: #f5f5f5;
+
+    color: #9ca3af;
+
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px){
+
+    .date-picker input{
+
+        height: 42px;
+
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .date-picker input{
+
+        height: 40px;
+
+        padding: 0 12px;
+
+        font-size: 13px;
+    }
+
+}

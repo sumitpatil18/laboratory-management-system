@@ -1,10 +1,9 @@
 import "./Sidebar.css";
-import { NavLink } from "react-router-dom"; 
+import { NavLink } from "react-router-dom";
 
-function Sidebar({menuItems}) {
+function Sidebar({ menuItems }) {
   return (
     <div className="sidebar">
-
       {/* Logo Section */}
       <div className="logo-section">
         <h1>Blood Lab</h1>
@@ -12,24 +11,18 @@ function Sidebar({menuItems}) {
       </div>
 
       {/* Menu */}
-      <ul className="menu"> 
-        {menuItems.map((item,index)=>(
-            <li key={index}>
-
-                <NavLink to={item.path}
-                className={({isActive})=>
-                  isActive ? "active-link" : ""
-                }
-                >
-                  {item.title}
-                </NavLink>
-                
-            </li>
-
+      <ul className="menu">
+        {menuItems.map((item, index) => (
+          <li key={index}>
+            <NavLink
+              to={item.path}
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              {item.title}
+            </NavLink>
+          </li>
         ))}
-
       </ul>
-
     </div>
   );
 }

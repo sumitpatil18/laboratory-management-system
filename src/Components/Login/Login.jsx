@@ -7,7 +7,6 @@ function Login() {
   };
 
   return (
-    
     <div className="main-container">
       {/* Left Section */}
       <div className="left-section">
@@ -35,28 +34,18 @@ function Login() {
         <div className="login-card">
           <h2 className="login-title">Welcome Back</h2>
 
-          <p className="login-subtitle">
-            Please login to continue
-          </p>
+          <p className="login-subtitle">Please login to continue</p>
 
           <form className="login-form" onSubmit={handleSubmit}>
             {/* Radio Buttons */}
             <div className="radio-group">
               <label className="radio-option">
-                <input
-                  type="radio"
-                  name="role"
-                  value="admin"
-                />
+                <input type="radio" name="role" value="admin" />
                 <span>Admin Login</span>
               </label>
 
               <label className="radio-option">
-                <input
-                  type="radio"
-                  name="role"
-                  value="laboratory"
-                />
+                <input type="radio" name="role" value="laboratory" />
                 <span>Laboratory User</span>
               </label>
             </div>
