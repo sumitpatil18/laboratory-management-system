@@ -1,16 +1,16 @@
 /* ==========================================
-   PRIMARY BUTTON
+   RESET BUTTON
 ========================================== */
 
-.primary-btn{
+.reset-btn{
 
-    border: none;
+    border: 1px solid #d1d5db;
 
     outline: none;
 
     border-radius: 10px;
 
-    background: linear-gradient(90deg, #c31432, #240b36);
+    background: #6b7280;
 
     color: #ffffff;
 
@@ -36,11 +36,17 @@
    HOVER
 ========================================== */
 
-.primary-btn:hover{
+.reset-btn:hover{
+
+    background: #f9fafb;
+
+    color: #111827;
+
+    border-color: #9ca3af;
 
     transform: translateY(-2px);
 
-    box-shadow: 0 10px 24px rgba(36, 11, 54, 0.25);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 
 }
 
@@ -48,7 +54,7 @@
    ACTIVE
 ========================================== */
 
-.primary-btn:active{
+.reset-btn:active{
 
     transform: scale(0.98);
 
@@ -58,13 +64,13 @@
    FOCUS
 ========================================== */
 
-.primary-btn:focus{
+.reset-btn:focus{
 
     outline: none;
 
     box-shadow:
-        0 0 0 3px rgba(195, 20, 50, 0.18),
-        0 10px 24px rgba(36, 11, 54, 0.20);
+        0 0 0 3px rgba(156, 163, 175, 0.25),
+        0 8px 20px rgba(0, 0, 0, 0.08);
 
 }
 
@@ -72,11 +78,13 @@
    DISABLED
 ========================================== */
 
-.primary-btn:disabled{
+.reset-btn:disabled{
 
-    background: #d1d5db;
+    background: #f3f4f6;
 
-    color: #6b7280;
+    color: #9ca3af;
+
+    border-color: #e5e7eb;
 
     cursor: not-allowed;
 
@@ -92,7 +100,7 @@
 
 @media (max-width: 768px){
 
-    .primary-btn{
+    .reset-btn{
 
         font-size: 14px;
 
@@ -102,7 +110,7 @@
 
 @media (max-width: 480px){
 
-    .primary-btn{
+    .reset-btn{
 
         font-size: 13px;
 

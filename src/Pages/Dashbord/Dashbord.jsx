@@ -10,6 +10,7 @@ import DatePicker from "../../Components/DatePicker/DatePicker";
 import { useState } from "react";
 import { selectStatus } from "../../Data/SelectionList";
 import Button from "../../Components/Button/Button";
+import ResetBTN from "../../Components/Button/ResetBTN";
 
 export default function Dashbord() {
   const [date,setDate]=useState("")
@@ -18,8 +19,9 @@ export default function Dashbord() {
       <Sidebar menuItems={labUserSidebarItem} />
       <div className="content">
         <Card>
-          <Inputfield type="text" placeholder="Enter Patient Name" />
-
+          <Inputfield type="text" placeholder="Enter First Name" />
+          <Inputfield type="text" placeholder="Enter Middle Name" />
+          <Inputfield type="text" placeholder="Enter Last Name" />
           <Inputfield type="number" placeholder="Enter Age" />
           <SelectionList menuItems={bloodGroup} />
           <SelectionList menuItems={testNames} />
@@ -29,8 +31,7 @@ export default function Dashbord() {
           />
           <SelectionList menuItems={selectStatus}/>
           <Button type="button" info="Search"/>
-          
-          
+          <ResetBTN type="button" info="Reset"/>
         </Card>
       </div>
     </>
