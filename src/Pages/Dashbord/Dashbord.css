@@ -2,7 +2,7 @@
    GOOGLE FONT
 ========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 
 
 *{
@@ -30,6 +30,23 @@
 
 }
 
+
+/* heading of page */
+.headline  h1{
+    font-size: 42px;
+    font-weight: 700;
+    margin-left: 300px;
+    margin-top: 30px;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.headline .subTitle-Dash{
+    font-size: 18px;
+    margin-left: 300px;
+    color: #6b7280;
+    margin-bottom: 35px;
+}
 
 
 /* ==========================================

@@ -1,6 +1,6 @@
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import Table from "../../Components/Table/Table";
-import { adminSidebarItem } from "../../Data/sidebarMenu";
+import { adminSidebarItem } from "../../Data/SidebarMenu";
 import "./ManageLaboratory.css";
 import Card from "../../Components/Card/Card";
 

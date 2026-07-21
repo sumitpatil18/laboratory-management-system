@@ -22,14 +22,11 @@ export const labUserSidebarItem=[
 
         {
             title:"Dashboard",
-            path:""
+            path:"/"
         },
         {
             title:"Patient Registration",
-            path:""
+            path:"patientregistation"
         },
-        {
-            title:"Logout",
-            path:""
-        },
+        
 ];
