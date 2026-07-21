@@ -13,25 +13,39 @@ import Button from "../../Components/Button/Button";
 import ResetBTN from "../../Components/Button/ResetBTN";
 
 export default function Dashbord() {
-  const [date,setDate]=useState("")
+  const [date, setDate] = useState("");
   return (
     <>
       <Sidebar menuItems={labUserSidebarItem} />
       <div className="content">
-        <Card>
-          <Inputfield type="text" placeholder="Enter First Name" />
-          <Inputfield type="text" placeholder="Enter Middle Name" />
-          <Inputfield type="text" placeholder="Enter Last Name" />
-          <Inputfield type="number" placeholder="Enter Age" />
-          <SelectionList menuItems={bloodGroup} />
-          <SelectionList menuItems={testNames} />
-          <DatePicker 
-          value={date}
-          onChange={(e)=>setDate(e.target.value)}
+      <Card>
+      <div className="filter-container">
+        
+          <Inputfield
+            className="filter-name"
+            type="text"
+            placeholder="Enter the Name"
           />
-          <SelectionList menuItems={selectStatus}/>
-          <Button type="button" info="Search"/>
-          <ResetBTN type="button" info="Reset"/>
+          
+          <Inputfield
+            className="filter-age"
+            type="number"
+            placeholder="Enter Age"
+          />
+          <SelectionList
+            className="filter-blood-group"
+            menuItems={bloodGroup}
+          />
+          <SelectionList className="filter-test-names" menuItems={testNames} />
+          <DatePicker
+            className="date-picker"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+          />
+          <SelectionList className="filter-status" menuItems={selectStatus} />
+          <Button className="search-button-new" type="button" info="Search" />
+          <ResetBTN className="reset-button" type="button" info="Reset" />
+        </div>
         </Card>
       </div>
     </>

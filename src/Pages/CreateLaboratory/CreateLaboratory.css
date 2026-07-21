@@ -83,7 +83,11 @@
     justify-content: center;
     margin-top: 25px;
 }
+.primary-btn{
 
+    padding:10px 25px;
+
+}
 /* ==========================================
    RESPONSIVE
 ========================================== */

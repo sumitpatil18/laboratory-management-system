@@ -1,5 +1,7 @@
 import React from "react";
 import "./Table.css";
+import DeleteBTN from "../Button/DeletBTN";
+import ResetBTN from "../Button/ResetBTN";
 
 const laboratories = [
   {
@@ -34,20 +36,9 @@ const laboratories = [
   },
 ];
 
-const Table = ({ title, subTitle }) => {
+const Table = () => {
   return (
     <div className="manage-laboratory">
-      {/* Header */}
-
-      <div className="page-header">
-        <div>
-          <h2>{title}</h2>
-          <p>{subTitle}</p>
-        </div>
-
-        <button className="add-btn">+ Add Laboratory</button>
-      </div>
-
       {/* Search */}
 
       <div className="search-section">
@@ -102,9 +93,11 @@ const Table = ({ title, subTitle }) => {
                 </td>
 
                 <td>
-                  <button className="edit-btn">Edit</button>
+                  <div className="action-buttons">
+                    <ResetBTN className="edit-btn" type="button" info="Edit" />
 
-                  <button className="delete-btn">Delete</button>
+                    <DeleteBTN className="delet-btn" type="button" info="Delete"/>
+                  </div>
                 </td>
               </tr>
             ))}

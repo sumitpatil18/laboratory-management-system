@@ -1,9 +1,9 @@
 import "./Button.css";
 
-export default function Button({ type, info }) {
+export default function Button({ type, info,className }) {
   return (
     <>
-      <button className="primary-btn" type={type}>{info}</button>
+      <button className={`primary-btn ${className || ""}`} type={type}>{info}</button>
     </>
   );
 }
