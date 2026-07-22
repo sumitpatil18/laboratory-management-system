@@ -2,27 +2,34 @@
    GOOGLE FONT
 ========================================== */
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 
+
+/* ==========================================
+   GLOBAL RESET
+========================================== */
 
 *{
+
+    margin:0;
+
+    padding:0;
+
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+
+    font-family:"Poppins",sans-serif;
+
 }
 
 
 
 /* ==========================================
-   MAIN CONTENT AREA
-   Sidebar width = 260px
+   DASHBOARD PAGE
 ========================================== */
 
 
-.content{
-
-    margin-left:260px;
-
-    padding:30px;
+.dashboard-page{
 
     min-height:100vh;
 
@@ -31,40 +38,91 @@
 }
 
 
-/* heading of page */
-.headline  h1{
-    font-size: 35px;
-    font-weight: 600;
-    margin-left: 300px;
-    margin-top: 30px;
-    color: #1f2937;
-    margin-bottom: 10px;
-}
-
-.headline .subTitle-Dash{
-    font-size: 18px;
-    margin-left: 300px;
-    color: #6b7280;
-    margin-bottom: 35px;
-}
-
 
 /* ==========================================
-   CARD FILTER AREA
+   MAIN CONTENT AREA
+   Sidebar Width = 260px
 ========================================== */
 
 
+.headline{
+
+    margin-left:260px;
+
+    padding:35px;
+
+}
+
+
+
+/* ==========================================
+   DASHBOARD HEADER
+========================================== */
+
+
+.dashboard-header{
+
+    margin-bottom:30px;
+
+}
+
+
+
+.dashboard-header h1{
+
+    font-size:35px;
+
+    font-weight:600;
+
+    color:#1f2937;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.subTitle-Dash{
+
+    font-size:18px;
+
+    color:#6b7280;
+
+}
+
+
+
+/* ==========================================
+   CONTENT AREA
+========================================== */
+
+
+.content{
+
+    width:100%;
+
+}
+
+
+
+/* ==========================================
+   CARD DESIGN
+========================================== */
+
+
+.content .card,
 .card{
 
     width:100%;
 
     background:#ffffff;
 
-    border-radius:24px;
+    border-radius:22px;
 
     padding:30px;
 
     box-shadow:
+
     0 10px 30px rgba(0,0,0,0.08);
 
 }
@@ -72,32 +130,26 @@
 
 
 /* ==========================================
-   FILTER CONTAINER
+   FILTER GRID
 ========================================== */
 
 
 .filter-container{
 
-
     display:grid;
 
-
-    grid-template-columns:
-    repeat(5,1fr);
-
+    grid-template-columns:repeat(5,1fr);
 
     gap:20px;
 
-
-    align-items:center;
-
+    align-items:end;
 
 }
 
 
 
 /* ==========================================
-   INPUT FIELD SIZE
+   COMPONENT WIDTH
 ========================================== */
 
 
@@ -106,7 +158,9 @@
 .filter-blood-group,
 .filter-test-names,
 .date-picker,
-.filter-status{
+.filter-status,
+.search-button,
+.reset-button{
 
     width:100%;
 
@@ -115,7 +169,7 @@
 
 
 /* ==========================================
-   INPUT COMMON DESIGN
+   INPUT DESIGN
 ========================================== */
 
 
@@ -128,7 +182,7 @@
 
     height:42px;
 
-    padding:0 15px;
+    padding:0 14px;
 
     border-radius:10px;
 
@@ -142,6 +196,7 @@
 
     outline:none;
 
+    transition:.3s;
 
 }
 
@@ -154,58 +209,20 @@
 
     border-color:#c31432;
 
+    box-shadow:
+
+    0 0 0 3px rgba(195,20,50,.1);
+
 }
 
 
 
 /* ==========================================
-   BUTTON
+   BUTTON DESIGN
 ========================================== */
 
 
-.search-button,
-.reset-button{
-
-
-    width:100%;
-
-}
-
-
-
-
-.search-button button{
-
-
-    width:100%;
-
-    height:42px;
-
-    border:none;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-
-    background:
-    linear-gradient(
-        90deg,
-        #c31432,
-        #240b36
-    );
-
-
-    color:white;
-
-    font-size:15px;
-
-    font-weight:600;
-
-}
-
-
-
+.search-button button,
 .reset-button button{
 
 
@@ -219,18 +236,43 @@
 
     cursor:pointer;
 
-
-    background:#6c7585;
-
-
-    color:white;
-
     font-size:15px;
 
     font-weight:600;
 
+    color:white;
+
+    transition:.3s;
+
 }
 
+
+
+.search-button button{
+
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        #c31432,
+
+        #240b36
+
+    );
+
+}
+
+
+
+.reset-button button{
+
+
+    background:#6c7585;
+
+}
 
 
 
@@ -240,37 +282,77 @@
 
     transform:translateY(-2px);
 
-    transition:0.3s;
+}
+
+
+
+/* ==========================================
+   LARGE LAPTOP
+========================================== */
+
+
+@media(max-width:1400px){
+
+
+    .filter-container{
+
+        grid-template-columns:repeat(4,1fr);
+
+    }
+
 
 }
 
 
 
 /* ==========================================
-   CARD RESPONSIVE
+   LAPTOP
 ========================================== */
 
-
-/* Large Tablet */
 
 @media(max-width:1200px){
 
 
-    .content{
+    .filter-container{
 
-        margin-left:260px;
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+
+}
+
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+
+@media(max-width:992px){
+
+
+    .headline{
+
+        margin-left:0;
 
         padding:25px;
 
     }
 
 
+
+    .dashboard-header h1{
+
+        font-size:30px;
+
+    }
+
+
+
     .filter-container{
 
-
-        grid-template-columns:
-        repeat(3,1fr);
-
+        grid-template-columns:repeat(2,1fr);
 
     }
 
@@ -279,73 +361,96 @@
 
 
 
-
-/* Tablet */
-
-@media(max-width:900px){
-
-
-    .content{
+/* ==========================================
+   MOBILE
+========================================== */
 
 
-        margin-left:0;
+@media(max-width:768px){
+
+
+    .headline{
 
         padding:20px;
 
-
-    }
-
-
-    .filter-container{
-
-
-        grid-template-columns:
-        repeat(2,1fr);
-
-
     }
 
 
 
-}
+    .dashboard-header h1{
 
-
-
-
-/* Mobile */
-
-
-@media(max-width:600px){
-
-
-    .content{
-
-
-        padding:15px;
-
+        font-size:26px;
 
     }
 
 
 
-    .filter-container{
+    .subTitle-Dash{
 
-
-        grid-template-columns:1fr;
-
-
-        gap:15px;
-
+        font-size:15px;
 
     }
+
 
 
     .card{
 
-
         padding:20px;
 
         border-radius:18px;
+
+    }
+
+
+
+    .filter-container{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+
+}
+
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+
+@media(max-width:480px){
+
+
+    .headline{
+
+        padding:15px;
+
+    }
+
+
+
+    .dashboard-header h1{
+
+        font-size:22px;
+
+    }
+
+
+
+    .subTitle-Dash{
+
+        font-size:14px;
+
+    }
+
+
+
+    .card{
+
+        padding:15px;
 
     }
 

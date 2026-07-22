@@ -11,7 +11,7 @@ import { Routes, Route } from "react-router-dom";
 //import Sidebar from "./Components/Sidebar/Sidebar";
 //import StaffManage from "./Pages/StaffManage/StaffManage";
 import Dashbord from "./Pages/Dashbord/Dashbord";
-import PatientRegistation from "./Pages/PatientRegistation/PatientRegistation";
+import PatientRegistation from "./Pages/PatientRegistation/PatientRegistration";
 
 function App() {
   return (

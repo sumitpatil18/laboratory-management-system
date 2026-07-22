@@ -4,35 +4,35 @@ export const bloodGroup=[
         info:"Select Blood Group"
     },
     {
-        value:"A+",
+        value:"A_POSITIVE",
         info:"A+"
     },
     {
-        value:"B+",
+        value:"B_POSITIVE+",
         info:"B+"
     },
     {
-        value:"AB+",
+        value:"AB_POSITIVE+",
         info:"AB+"
     },
     {
-        value:"O+",
+        value:"O_POSITIVE",
         info:"O+"
     },
     {
-        value:"A-",
+        value:"A_NEGATIVE-",
         info:"A-"
     },
     {
-        value:"B-",
+        value:"B_NEGATIVE",
         info:"B-"
     },
     {
-        value:"AB-",
+        value:"AB_NEGATIVE-",
         info:"AB-"
     },
     {
-        value:"O-",
+        value:"O_NEGATIVE-",
         info:"O-"
     }
 
@@ -41,7 +41,7 @@ export const bloodGroup=[
 export const testNames=[
 
     {
-        value:"Select Test Name",
+        value:"Select_Test_Name",
         info:"Select Test Name"
     },
     {
@@ -65,19 +65,19 @@ export const testNames=[
         info:"URINE"
     },
     {
-        value:"RAPID MP",
+        value:"RAPID_MP",
         info:"RAPID MP"
     },
     {
-        value:"DENGUE NS1 Ag,LgG & LgM",
+        value:"DENGUE_NS1_Ag_LgG_&_LgM",
         info:"DENGUE NS1 Ag,LgG & LgM"
     },
     {
-        value:"BSL (R)",
+        value:"BSL_R",
         info:"BSL (R)"
     },
     {
-        value:"BSL (F) & (PP)",
+        value:"BSL_F_&_PP",
         info:"BSL (F) & (PP)"
     },
     {
@@ -89,7 +89,7 @@ export const testNames=[
         info:"LFT"
     },
     {
-        value:"LIFID PROFILE",
+        value:"LIFID_PROFILE",
         info:"LIFID PROFILE"
     },
     {
@@ -101,7 +101,7 @@ export const testNames=[
         info:"CALCIUM"
     },
     {
-        value:"S-URIC ACID",
+        value:"S-URIC_ACID",
         info:"S-URIC ACID"
     },
     {
@@ -117,11 +117,11 @@ export const testNames=[
         info:"HCV"
     },
     {
-        value:"Blood Group",
+        value:"Blood_Group",
         info:"Blood Group"
     },
     {
-        value:"CK-MB",
+        value:"CK_MB",
         info:"CK-MB"
     },
     {
@@ -133,19 +133,19 @@ export const testNames=[
         info:"ASO"
     },
     {
-        value:"TROP-T",
+        value:"TROP_T",
         info:"TROP-T"
     },
     {
-        value:"TROP-I",
+        value:"TROP_I",
         info:"TROP-I"
     },
     {
-        value:"ICU PROFILE",
+        value:"ICU_PROFILE",
         info:"ICU PROFILE"
     },
     {
-        value:"OPPREATIVE PROFILE",
+        value:"OPPREATIVE_PROFILE",
         info:"OPPREATIVE PROFILE"
     },
 ];
@@ -153,7 +153,7 @@ export const testNames=[
 export const selectStatus=[
 
     {
-        value:"Select Status",
+        value:"Select_Status",
         info:"Select Status"
     },
     {
@@ -168,4 +168,62 @@ export const selectStatus=[
         value:"Processing",
         info:"Processing"
     }
+];
+
+
+export const TitleName=[
+    {
+        value:"Select",
+        info:"Select"
+    },
+    {
+        value:"MR",
+        info:"MR"
+    },
+    {
+        value:"Baby",
+        info:"Baby"
+    },
+    {
+        value:"Baby_Of",
+        info:"Baby-Of"
+    },
+    {
+        value:"Sis",
+        info:"Sis"
+    },
+    {
+        value:"MRs",
+        info:"MRs"
+    },
+    {
+        value:"MISS",
+        info:"MISS"
+    },
+    {
+        value:"Ms",
+        info:"Ms"
+    },
+    {
+        value:"Dr",
+        info:"Dr"
+    },
+    {
+        value:"Dr_Dot",
+        info:"Dr."
+    },
+    {
+        value:"MAST",
+        info:"MAST"
+    },
+    {
+        value:"Adv",
+        info:"Adv"
+    },
+    {
+        value:"MAST_Dot",
+        info:"MAST."
+    },
+
+
 ];
