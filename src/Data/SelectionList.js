@@ -174,56 +174,68 @@ export const selectStatus=[
 export const TitleName=[
     {
         value:"Select",
-        info:"Select"
+        info:"Select",
+        gender:""
     },
     {
         value:"MR",
-        info:"MR"
+        info:"MR",
+        gender:"Male"
     },
     {
         value:"Baby",
-        info:"Baby"
+        info:"Baby",
+        gender:"Male"
     },
     {
         value:"Baby_Of",
-        info:"Baby-Of"
+        info:"Baby-Of",
+        gender:""
     },
     {
         value:"Sis",
-        info:"Sis"
+        info:"Sis",
+        gender:"Female"
     },
     {
         value:"MRs",
-        info:"MRs"
+        info:"Mrs",
+        gender:"Female"
     },
     {
         value:"MISS",
-        info:"MISS"
+        info:"MISS",
+        gender:"Female"
     },
     {
         value:"Ms",
-        info:"Ms"
+        info:"Ms",
+        gender:"Female"
     },
     {
         value:"Dr",
-        info:"Dr"
+        info:"Dr",
+        gender:""
     },
     {
         value:"Dr_Dot",
-        info:"Dr."
+        info:"Dr.",
+        gender:""
     },
     {
         value:"MAST",
-        info:"MAST"
+        info:"MAST",
+        gender:"Male"
     },
     {
         value:"Adv",
-        info:"Adv"
+        info:"Adv",
+        gender:""
     },
     {
         value:"MAST_Dot",
-        info:"MAST."
-    },
-
+        info:"MAST.",
+        gender:"Male"
+    }
 
 ];

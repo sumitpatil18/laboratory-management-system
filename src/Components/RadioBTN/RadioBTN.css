@@ -1,0 +1,101 @@
+/* ==========================================
+   RADIO BUTTON CONTAINER
+========================================== */
+
+.gender-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ==========================================
+   LABEL DESIGN
+========================================== */
+
+.gender-label {
+  font-size: 13px;
+
+  font-weight: 500;
+
+  color: #333;
+}
+
+/* ==========================================
+   RADIO GROUP
+========================================== */
+
+.radio-group {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  flex-wrap: wrap;
+}
+
+/* ==========================================
+   SINGLE RADIO ITEM
+========================================== */
+
+.radio-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+/* ==========================================
+   RADIO INPUT
+========================================== */
+
+.gender-radio {
+  accent-color: #c31432;
+
+  cursor: pointer;
+}
+
+/* ==========================================
+   RADIO TEXT
+========================================== */
+
+.radio-text {
+  font-size: 14px;
+
+  color: #444;
+
+  cursor: pointer;
+
+  user-select: none;
+}
+
+/* ==========================================
+   HOVER EFFECT
+========================================== */
+
+.radio-item:hover .radio-text {
+  color: #c31432;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 768px) {
+  .radio-group {
+    gap: 15px;
+  }
+
+  .radio-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .radio-group {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}
