@@ -1,111 +1,162 @@
 /* ==========================================
-   PRIMARY BUTTON
+   BASE BUTTON COMPONENT
 ========================================== */
 
-.primary-btn{
+.primary-btn {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 
-    border: none;
+  /* Size */
+  min-height: 42px;
+  min-width: 140px;
+  padding: 0 24px;
 
-    outline: none;
+  /* Border */
+  border: none;
+  border-radius: 10px;
 
-    border-radius: 10px;
+  /* Background */
+  background: linear-gradient(90deg, #c31432, #240b36);
 
-    background: linear-gradient(90deg, #c31432, #240b36);
+  /* Text */
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 
-    color: #ffffff;
+  /* Interaction */
+  cursor: pointer;
+  user-select: none;
 
-    font-family: "Poppins", sans-serif;
+  /* Prevent text breaking */
+  white-space: nowrap;
 
-    font-size: 15px;
+  /* Browser calculation */
+  box-sizing: border-box;
 
-    font-weight: 600;
-
-    letter-spacing: 0.3px;
-
-    cursor: pointer;
-
-    user-select: none;
-
-    box-sizing: border-box;
-
-    transition: all 0.3s ease;
-
+  /* Animation */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    opacity 0.3s ease;
 }
 
 /* ==========================================
-   HOVER
+   HOVER STATE
 ========================================== */
 
-.primary-btn:hover{
+.primary-btn:hover {
+  transform: translateY(-2px);
 
-    transform: translateY(-2px);
-
-    box-shadow: 0 10px 24px rgba(36, 11, 54, 0.25);
-
+  box-shadow: 0 10px 24px rgba(36, 11, 54, 0.25);
 }
 
 /* ==========================================
-   ACTIVE
+   ACTIVE / CLICK STATE
 ========================================== */
 
-.primary-btn:active{
-
-    transform: scale(0.98);
-
+.primary-btn:active {
+  transform: scale(0.98);
 }
 
 /* ==========================================
-   FOCUS
+   KEYBOARD ACCESSIBILITY
 ========================================== */
 
-.primary-btn:focus{
+.primary-btn:focus-visible {
+  outline: none;
 
-    outline: none;
-
-    box-shadow:
-        0 0 0 3px rgba(195, 20, 50, 0.18),
-        0 10px 24px rgba(36, 11, 54, 0.20);
-
+  box-shadow:
+    0 0 0 3px rgba(195, 20, 50, 0.18),
+    0 10px 24px rgba(36, 11, 54, 0.2);
 }
 
 /* ==========================================
-   DISABLED
+   DISABLED STATE
 ========================================== */
 
-.primary-btn:disabled{
+.primary-btn:disabled {
+  background: #d1d5db;
 
-    background: #d1d5db;
+  color: #6b7280;
 
-    color: #6b7280;
+  cursor: not-allowed;
 
-    cursor: not-allowed;
+  transform: none;
 
-    transform: none;
+  box-shadow: none;
 
-    box-shadow: none;
-
+  opacity: 0.8;
 }
 
 /* ==========================================
-   RESPONSIVE
+   LOADING STATE
 ========================================== */
 
-@media (max-width: 768px){
+.primary-btn.loading {
+  cursor: wait;
 
-    .primary-btn{
+  pointer-events: none;
 
-        font-size: 14px;
-
-    }
-
+  opacity: 0.75;
 }
 
-@media (max-width: 480px){
+/* ==========================================
+   BUTTON SIZE VARIANTS
+   (Reusable Design System)
+========================================== */
 
-    .primary-btn{
+.primary-btn.small {
+  min-height: 34px;
 
-        font-size: 13px;
+  padding: 0 16px;
 
-    }
+  font-size: 13px;
+}
 
+.primary-btn.medium {
+  min-height: 42px;
+
+  padding: 0 24px;
+
+  font-size: 15px;
+}
+
+.primary-btn.large {
+  min-height: 50px;
+
+  padding: 0 32px;
+
+  font-size: 17px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 768px) {
+  .primary-btn {
+    min-width: 120px;
+
+    padding: 0 20px;
+
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .primary-btn {
+    min-width: 100px;
+
+    min-height: 40px;
+
+    padding: 0 16px;
+
+    font-size: 13px;
+  }
 }

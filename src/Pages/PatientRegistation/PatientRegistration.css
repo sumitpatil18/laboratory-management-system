@@ -4,144 +4,99 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-
-
 /* ==========================================
    GLOBAL RESET
 ========================================== */
 
+* {
+  margin: 0;
 
-*{
+  padding: 0;
 
-    margin:0;
+  box-sizing: border-box;
 
-    padding:0;
-
-    box-sizing:border-box;
-
-    font-family:"Poppins",sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
-
-
 
 /* ==========================================
    PAGE
 ========================================== */
 
+.patient-registration-page {
+  min-height: 100vh;
 
-.patient-registration-page{
-
-    min-height:100vh;
-
-    background:#f5f7fb;
-
+  background: #f5f7fb;
 }
-
-
 
 /* ==========================================
    MAIN CONTENT
    Sidebar Width = 260px
 ========================================== */
 
+.Patient-content {
+  margin-left: 260px;
 
-.Patient-content{
-
-    margin-left:260px;
-
-    padding:35px;
-
+  padding: 35px;
 }
-
-
 
 /* ==========================================
    PAGE HEADER
 ========================================== */
 
-
-.patient-header{
-
-    margin-bottom:30px;
-
+.patient-header {
+  margin-bottom: 30px;
 }
 
+.patient-header h1 {
+  font-size: 35px;
 
+  font-weight: 600;
 
-.patient-header h1{
+  color: #1f2937;
 
-    font-size:35px;
-
-    font-weight:600;
-
-    color:#1f2937;
-
-    margin-bottom:10px;
-
+  margin-bottom: 10px;
 }
 
+.subTitle-Patient {
+  font-size: 18px;
 
-
-.subTitle-Patient{
-
-    font-size:18px;
-
-    color:#6b7280;
-
+  color: #6b7280;
 }
-
-
 
 /* ==========================================
    CARD OUTER AREA
 ========================================== */
 
-
-.card-outer-manage{
-
-    width:100%;
-
+.card-outer-manage {
+  width: 100%;
 }
-
-
 
 /* ==========================================
    FORM GRID
 ========================================== */
 
+.card-inner-manage {
+  width: 100%;
 
-.card-inner-manage{
+  display: grid;
 
-    width:100%;
+  grid-template-columns: repeat(3, 1fr);
 
-    display:grid;
+  gap: 25px;
 
-    grid-template-columns:repeat(3,1fr);
-
-    gap:25px;
-
-    padding:10px;
-
+  padding: 10px;
 }
-
-
 
 /* ==========================================
    INPUT COMPONENT WIDTH
 ========================================== */
 
-
 .patient-name,
 .patient-age,
 .patient-mobile,
-.gender-select-in-lab{
-
-    width:100%;
-
+.gender-select-in-lab {
+  width: 100%;
 }
-
-
 
 /* ==========================================
    NORMAL INPUT DESIGN
@@ -149,356 +104,204 @@
    (Only text, number, tel etc.)
 ========================================== */
 
+.card-inner-manage input:not([type="radio"]) {
+  width: 100%;
 
-.card-inner-manage input:not([type="radio"]){
+  height: 42px;
 
+  padding: 0 15px;
 
-    width:100%;
+  border-radius: 10px;
 
-    height:42px;
+  border: 1px solid #d9dee8;
 
-    padding:0 15px;
+  background: #ffffff;
 
-    border-radius:10px;
+  color: #24324a;
 
-    border:1px solid #d9dee8;
+  font-size: 14px;
 
-    background:#ffffff;
+  outline: none;
 
-    color:#24324a;
-
-    font-size:14px;
-
-    outline:none;
-
-    transition:.3s;
-
+  transition: 0.3s;
 }
 
+.card-inner-manage input:not([type="radio"]):focus {
+  border-color: #c31432;
 
-
-.card-inner-manage input:not([type="radio"]):focus{
-
-
-    border-color:#c31432;
-
-
-    box-shadow:
-
-    0 0 0 3px rgba(195,20,50,.1);
-
+  box-shadow: 0 0 0 3px rgba(195, 20, 50, 0.1);
 }
-
-
 
 /* ==========================================
    SELECT DROPDOWN
 ========================================== */
 
+.card-inner-manage select {
+  width: 100%;
 
-.card-inner-manage select{
+  height: 42px;
 
+  padding: 0 15px;
 
-    width:100%;
+  border-radius: 10px;
 
-    height:42px;
+  border: 1px solid #d9dee8;
 
-    padding:0 15px;
+  background: #ffffff;
 
-    border-radius:10px;
+  color: #24324a;
 
-    border:1px solid #d9dee8;
+  font-size: 14px;
 
-    background:#ffffff;
+  outline: none;
 
-    color:#24324a;
-
-    font-size:14px;
-
-    outline:none;
-
-    cursor:pointer;
-
+  cursor: pointer;
 }
 
+.card-inner-manage select:focus {
+  border-color: #c31432;
 
-
-.card-inner-manage select:focus{
-
-
-    border-color:#c31432;
-
-
-    box-shadow:
-
-    0 0 0 3px rgba(195,20,50,.1);
-
+  box-shadow: 0 0 0 3px rgba(195, 20, 50, 0.1);
 }
-
-
 
 /* ==========================================
    GENDER RADIO POSITION
 ========================================== */
 
+.gender-container {
+  display: flex;
 
-.gender-container{
+  flex-direction: column;
 
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
+  justify-content: center;
 }
 
+.gender-container > label {
+  font-size: 13px;
 
+  font-weight: 500;
 
-.gender-container > label{
+  color: #333;
 
-
-    font-size:13px;
-
-    font-weight:500;
-
-    color:#333;
-
-    margin-bottom:8px;
-
+  margin-bottom: 8px;
 }
 
+.radio-group {
+  display: flex;
 
+  align-items: center;
 
-.radio-group{
+  gap: 20px;
 
-
-    display:flex;
-
-    align-items:center;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
+  flex-wrap: wrap;
 }
-
-
 
 /* Radio Button Fix */
 
-.radio-group input[type="radio"]{
+.radio-group input[type="radio"] {
+  width: auto;
 
+  height: auto;
 
-    width:auto;
+  padding: 0;
 
-    height:auto;
+  margin: 0;
 
-    padding:0;
+  cursor: pointer;
 
-    margin:0;
-
-    cursor:pointer;
-
-    accent-color:#c31432;
-
+  accent-color: #c31432;
 }
 
+.radio-group div {
+  display: flex;
 
+  align-items: center;
 
-.radio-group div{
-
-
-    display:flex;
-
-    align-items:center;
-
-    gap:7px;
-
+  gap: 7px;
 }
 
+.radio-group label {
+  font-size: 14px;
 
+  color: #444;
 
-.radio-group label{
-
-
-    font-size:14px;
-
-    color:#444;
-
-    cursor:pointer;
-
+  cursor: pointer;
 }
-
-
 
 /* ==========================================
    TABLET RESPONSIVE
 ========================================== */
 
-
-@media(max-width:1100px){
-
-
-.card-inner-manage{
-
-
-    grid-template-columns:repeat(2,1fr);
-
-
+@media (max-width: 1100px) {
+  .card-inner-manage {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
-
-}
-
-
 
 /* ==========================================
    SIDEBAR COLLAPSE
 ========================================== */
 
+@media (max-width: 992px) {
+  .Patient-content {
+    margin-left: 0;
 
-@media(max-width:992px){
-
-
-.Patient-content{
-
-
-    margin-left:0;
-
-    padding:25px;
-
-
+    padding: 25px;
+  }
 }
-
-
-
-}
-
-
 
 /* ==========================================
    MOBILE
 ========================================== */
 
+@media (max-width: 768px) {
+  .Patient-content {
+    padding: 20px;
+  }
 
-@media(max-width:768px){
+  .patient-header h1 {
+    font-size: 28px;
+  }
 
+  .subTitle-Patient {
+    font-size: 15px;
+  }
 
-.Patient-content{
+  .card-inner-manage {
+    grid-template-columns: 1fr;
 
+    gap: 20px;
+  }
 
-    padding:20px;
-
-
+  .radio-group {
+    gap: 15px;
+  }
 }
-
-
-
-.patient-header h1{
-
-
-    font-size:28px;
-
-
-}
-
-
-
-.subTitle-Patient{
-
-
-    font-size:15px;
-
-
-}
-
-
-
-.card-inner-manage{
-
-
-    grid-template-columns:1fr;
-
-    gap:20px;
-
-
-}
-
-
-
-.radio-group{
-
-
-    gap:15px;
-
-
-}
-
-
-
-}
-
-
 
 /* ==========================================
    SMALL MOBILE
 ========================================== */
 
+@media (max-width: 480px) {
+  .Patient-content {
+    padding: 15px;
+  }
 
-@media(max-width:480px){
+  .patient-header h1 {
+    font-size: 23px;
+  }
 
+  .subTitle-Patient {
+    font-size: 14px;
+  }
 
-.Patient-content{
+  .card-inner-manage {
+    padding: 5px;
+  }
 
+  .radio-group {
+    flex-direction: column;
 
-    padding:15px;
-
-
-}
-
-
-
-.patient-header h1{
-
-
-    font-size:23px;
-
-
-}
-
-
-
-.subTitle-Patient{
-
-
-    font-size:14px;
-
-
-}
-
-
-
-.card-inner-manage{
-
-
-    padding:5px;
-
-
-}
-
-
-
-.radio-group{
-
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-
-}
-
-
-
+    align-items: flex-start;
+  }
 }

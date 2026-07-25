@@ -64,6 +64,8 @@ export default function PatientRegistration() {
                 label="Title"
                 className="gender-select-in-lab"
                 menuItems={TitleName}
+                value={title}
+                onChange={handleTitleChange}
               />
 
               <RadioBTN
