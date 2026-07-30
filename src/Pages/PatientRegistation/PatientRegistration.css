@@ -8,319 +8,298 @@
    GLOBAL RESET
 ========================================== */
 
-* {
-  margin: 0;
-
-  padding: 0;
-
-  box-sizing: border-box;
-
-  font-family: "Poppins", sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
 }
 
 /* ==========================================
    PAGE
 ========================================== */
 
-.patient-registration-page {
-  min-height: 100vh;
-
-  background: #f5f7fb;
+.patient-registration-page{
+    min-height:100vh;
+    background:#f5f7fb;
 }
 
 /* ==========================================
    MAIN CONTENT
-   Sidebar Width = 260px
 ========================================== */
 
-.Patient-content {
-  margin-left: 260px;
-
-  padding: 35px;
+.Patient-content{
+    margin-left:260px;
+    padding:35px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 /* ==========================================
    PAGE HEADER
 ========================================== */
 
-.patient-header {
-  margin-bottom: 30px;
+.patient-header{
+    width:100%;
+    max-width:1200px;
+    margin-bottom:30px;
 }
 
-.patient-header h1 {
-  font-size: 35px;
-
-  font-weight: 600;
-
-  color: #1f2937;
-
-  margin-bottom: 10px;
+.patient-header h1{
+    font-size:35px;
+    font-weight:600;
+    color:#1f2937;
+    margin-bottom:10px;
 }
 
-.subTitle-Patient {
-  font-size: 18px;
-
-  color: #6b7280;
+.subTitle-Patient{
+    font-size:18px;
+    color:#6b7280;
 }
 
 /* ==========================================
-   CARD OUTER AREA
+   CARD CONTAINER
 ========================================== */
 
-.card-outer-manage {
-  width: 100%;
+.card-outer-manage{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
 }
 
 /* ==========================================
    FORM GRID
 ========================================== */
 
-.card-inner-manage {
-  width: 100%;
-
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 25px;
-
-  padding: 10px;
+.card-inner-manage{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(250px,1fr));
+    gap:25px;
+    align-items:end;
 }
 
 /* ==========================================
-   INPUT COMPONENT WIDTH
+   INPUT WIDTH
 ========================================== */
 
 .patient-name,
 .patient-age,
 .patient-mobile,
-.gender-select-in-lab {
-  width: 100%;
+.gender-select-in-lab{
+    width:100%;
 }
 
 /* ==========================================
-   NORMAL INPUT DESIGN
-
-   (Only text, number, tel etc.)
+   INPUT
 ========================================== */
 
-.card-inner-manage input:not([type="radio"]) {
-  width: 100%;
-
-  height: 42px;
-
-  padding: 0 15px;
-
-  border-radius: 10px;
-
-  border: 1px solid #d9dee8;
-
-  background: #ffffff;
-
-  color: #24324a;
-
-  font-size: 14px;
-
-  outline: none;
-
-  transition: 0.3s;
+.card-inner-manage input:not([type="radio"]){
+    width:100%;
+    height:42px;
+    padding:0 15px;
+    border:1px solid #d9dee8;
+    border-radius:10px;
+    background:#ffffff;
+    font-size:14px;
+    color:#24324a;
+    outline:none;
+    transition:.3s;
 }
 
-.card-inner-manage input:not([type="radio"]):focus {
-  border-color: #c31432;
-
-  box-shadow: 0 0 0 3px rgba(195, 20, 50, 0.1);
-}
-
-
-
-/* ==========================================
-   SELECT DROPDOWN
-========================================== */
-
-.card-inner-manage select {
-  width: 100%;
-
-  height: 42px;
-
-  padding: 0 15px;
-
-  border-radius: 10px;
-
-  border: 1px solid #d9dee8;
-
-  background: #ffffff;
-
-  color: #24324a;
-
-  font-size: 14px;
-
-  outline: none;
-
-  cursor: pointer;
-}
-
-.card-inner-manage select:focus {
-  border-color: #c31432;
-
-  box-shadow: 0 0 0 3px rgba(195, 20, 50, 0.1);
+.card-inner-manage input:not([type="radio"]):focus{
+    border-color:#c31432;
+    box-shadow:0 0 0 3px rgba(195,20,50,.1);
 }
 
 /* ==========================================
-   GENDER RADIO POSITION
+   SELECT
 ========================================== */
 
-.gender-container {
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
+.card-inner-manage select{
+    width:100%;
+    height:42px;
+    padding:0 15px;
+    border:1px solid #d9dee8;
+    border-radius:10px;
+    background:#ffffff;
+    font-size:14px;
+    color:#24324a;
+    outline:none;
+    cursor:pointer;
+    transition:.3s;
 }
 
-.gender-container > label {
-  font-size: 13px;
-
-  font-weight: 500;
-
-  color: #333;
-
-  margin-bottom: 8px;
+.card-inner-manage select:focus{
+    border-color:#c31432;
+    box-shadow:0 0 0 3px rgba(195,20,50,.1);
 }
 
-.radio-group {
-  display: flex;
+/* ==========================================
+   GENDER
+========================================== */
 
-  align-items: center;
-
-  gap: 20px;
-
-  flex-wrap: wrap;
+.gender-container{
+    display:flex;
+    flex-direction:column;
 }
 
-/* Radio Button Fix */
-
-.radio-group input[type="radio"] {
-  width: auto;
-
-  height: auto;
-
-  padding: 0;
-
-  margin: 0;
-
-  cursor: pointer;
-
-  accent-color: #c31432;
+.gender-container>label{
+    font-size:13px;
+    font-weight:500;
+    color:#374151;
+    margin-bottom:8px;
 }
 
-.radio-group div {
-  display: flex;
-
-  align-items: center;
-
-  gap: 7px;
+.radio-group{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
-.radio-group label {
-  font-size: 14px;
-
-  color: #444;
-
-  cursor: pointer;
+.radio-group div{
+    display:flex;
+    align-items:center;
+    gap:7px;
 }
 
+.radio-group input[type="radio"]{
+    accent-color:#c31432;
+    cursor:pointer;
+}
 
-.patient-registration {
+.radio-group label{
+    font-size:14px;
+    color:#374151;
+    cursor:pointer;
+}
 
-    width: 100%;
+/* ==========================================
+   REGISTRATION BUTTON
+========================================== */
+
+.patient-registration{
+
+    /* Span across the entire grid row */
+    grid-column: 1 / -1;
+
+    /* Center the button horizontally */
+    justify-self: center; 
 
     min-height: 42px;
 
-    display: flex;
+    /* Width controlled by this page */
+    width: 260px;
 
-    align-items: center;
+    /* Space from the form fields */
+    margin-top: 12px;
 
-    justify-content: center;
+}
+/* ==========================================
+   LARGE LAPTOP
+========================================== */
 
-    align-self: end;
+@media(max-width:1400px){
+
+    .card-outer-manage{
+        max-width:1100px;
+    }
 
 }
 
 /* ==========================================
-   TABLET RESPONSIVE
+   LAPTOP
 ========================================== */
 
-@media (max-width: 1100px) {
-  .card-inner-manage {
-    grid-template-columns: repeat(2, 1fr);
-  }
+@media(max-width:1200px){
+
+    .card-outer-manage{
+        max-width:1000px;
+    }
+
+    .card-inner-manage{
+        grid-template-columns:repeat(2,minmax(250px,1fr));
+    }
+
 }
 
 /* ==========================================
-   SIDEBAR COLLAPSE
+   TABLET
 ========================================== */
 
-@media (max-width: 992px) {
-  .Patient-content {
-    margin-left: 0;
+@media(max-width:992px){
 
-    padding: 25px;
-  }
+    .Patient-content{
+        margin-left:0;
+        padding:25px;
+    }
+
+    .patient-header{
+        max-width:100%;
+    }
+
+    .card-outer-manage{
+        max-width:100%;
+    }
+
 }
 
 /* ==========================================
    MOBILE
 ========================================== */
 
-@media (max-width: 768px) {
-  .Patient-content {
-    padding: 20px;
-  }
+@media(max-width:768px){
 
-  .patient-header h1 {
-    font-size: 28px;
-  }
+    .Patient-content{
+        padding:20px;
+    }
 
-  .subTitle-Patient {
-    font-size: 15px;
-  }
+    .patient-header h1{
+        font-size:28px;
+    }
 
-  .card-inner-manage {
-    grid-template-columns: 1fr;
+    .subTitle-Patient{
+        font-size:15px;
+    }
 
-    gap: 20px;
-  }
+    .card-inner-manage{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
 
-  .radio-group {
-    gap: 15px;
-  }
+    .radio-group{
+        gap:15px;
+    }
+
+    .patient-registration{
+        width:100%;
+    }
+
 }
 
 /* ==========================================
    SMALL MOBILE
 ========================================== */
 
-@media (max-width: 480px) {
-  .Patient-content {
-    padding: 15px;
-  }
+@media(max-width:480px){
 
-  .patient-header h1 {
-    font-size: 23px;
-  }
+    .Patient-content{
+        padding:15px;
+    }
 
-  .subTitle-Patient {
-    font-size: 14px;
-  }
+    .patient-header h1{
+        font-size:23px;
+    }
 
-  .card-inner-manage {
-    padding: 5px;
-  }
+    .subTitle-Patient{
+        font-size:14px;
+    }
 
-  .radio-group {
-    flex-direction: column;
+    .radio-group{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 
-    align-items: flex-start;
-  }
 }
