@@ -75,7 +75,7 @@ export default function Dashbord() {
 
               <Button className="search-button" type="button" info="Search" />
 
-              <ResetBTN className="reset-button" type="button" info="Reset" />
+              <ResetBTN  type="button" info="Reset" className="reset-button"/>
             </div>
           </Card>
         </div>

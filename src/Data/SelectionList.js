@@ -1,7 +1,7 @@
 export const bloodGroup=[
     {
         value:"",
-        info:"Select Blood Group ▼"
+        info:"Select Blood Group "
     },
     {
         value:"A_POSITIVE",
@@ -41,7 +41,7 @@ export const bloodGroup=[
 export const testNames = [
   {
     value: "Select_Test_Name",
-    info: "Select Test Name ▼"
+    info: "Select Test Name "
   },
   {
     value: "ASO",
@@ -153,7 +153,7 @@ export const selectStatus=[
 
     {
         value:"Select_Status",
-        info:"Select Status ▼"
+        info:"Select Status "
     },
     {
         value:"Completed",

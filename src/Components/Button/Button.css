@@ -1,162 +1,177 @@
 /* ==========================================
-   BASE BUTTON COMPONENT
+   PRIMARY BUTTON COMPONENT
+   Reusable Button Design
 ========================================== */
 
 .primary-btn {
-  /* Layout */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
 
-  /* Size */
-  min-height: 42px;
-  min-width: 140px;
-  padding: 0 24px;
+    /* Layout */
 
-  /* Border */
-  border: none;
-  border-radius: 10px;
+    display: inline-flex;
 
-  /* Background */
-  background: linear-gradient(90deg, #c31432, #240b36);
+    align-items: center;
 
-  /* Text */
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
+    justify-content: center;
 
-  /* Interaction */
-  cursor: pointer;
-  user-select: none;
+    gap: 8px;
 
-  /* Prevent text breaking */
-  white-space: nowrap;
+    /* Appearance */
 
-  /* Browser calculation */
-  box-sizing: border-box;
+    border: none;
 
-  /* Animation */
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background 0.3s ease,
-    opacity 0.3s ease;
+    outline: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(90deg, #c31432, #240b36);
+
+    /* Typography */
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    /* Interaction */
+
+    cursor: pointer;
+
+    user-select: none;
+
+    box-sizing: border-box;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
 }
 
 /* ==========================================
-   HOVER STATE
+   HOVER
 ========================================== */
 
 .primary-btn:hover {
-  transform: translateY(-2px);
 
-  box-shadow: 0 10px 24px rgba(36, 11, 54, 0.25);
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 24px rgba(36, 11, 54, 0.25);
+
 }
 
 /* ==========================================
-   ACTIVE / CLICK STATE
+   ACTIVE
 ========================================== */
 
 .primary-btn:active {
-  transform: scale(0.98);
+
+    transform: scale(0.98);
+
 }
 
 /* ==========================================
-   KEYBOARD ACCESSIBILITY
+   FOCUS
 ========================================== */
 
 .primary-btn:focus-visible {
-  outline: none;
 
-  box-shadow:
-    0 0 0 3px rgba(195, 20, 50, 0.18),
-    0 10px 24px rgba(36, 11, 54, 0.2);
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px rgba(195, 20, 50, 0.18),
+        0 10px 24px rgba(36, 11, 54, 0.18);
+
 }
 
 /* ==========================================
-   DISABLED STATE
+   DISABLED
 ========================================== */
 
 .primary-btn:disabled {
-  background: #d1d5db;
 
-  color: #6b7280;
+    background: #d1d5db;
 
-  cursor: not-allowed;
+    color: #6b7280;
 
-  transform: none;
+    cursor: not-allowed;
 
-  box-shadow: none;
+    box-shadow: none;
 
-  opacity: 0.8;
+    transform: none;
+
+    opacity: 0.8;
+
 }
 
 /* ==========================================
-   LOADING STATE
+   LOADING
 ========================================== */
 
 .primary-btn.loading {
-  cursor: wait;
 
-  pointer-events: none;
+    pointer-events: none;
 
-  opacity: 0.75;
+    cursor: wait;
+
+    opacity: 0.7;
+
 }
 
 /* ==========================================
-   BUTTON SIZE VARIANTS
-   (Reusable Design System)
+   SIZE VARIANTS
+   Parent controls width & spacing
 ========================================== */
 
 .primary-btn.small {
-  min-height: 34px;
 
-  padding: 0 16px;
+    font-size: 13px;
 
-  font-size: 13px;
 }
 
 .primary-btn.medium {
-  min-height: 42px;
 
-  padding: 0 24px;
+    font-size: 15px;
 
-  font-size: 15px;
 }
 
 .primary-btn.large {
-  min-height: 50px;
 
-  padding: 0 32px;
+    font-size: 17px;
 
-  font-size: 17px;
 }
 
 /* ==========================================
-   RESPONSIVE DESIGN
+   RESPONSIVE
 ========================================== */
 
-@media (max-width: 768px) {
-  .primary-btn {
-    min-width: 120px;
+@media (max-width:768px){
 
-    padding: 0 20px;
+    .primary-btn{
 
-    font-size: 14px;
-  }
+        font-size:14px;
+
+    }
+
 }
 
-@media (max-width: 480px) {
-  .primary-btn {
-    min-width: 100px;
+@media (max-width:480px){
 
-    min-height: 40px;
+    .primary-btn{
 
-    padding: 0 16px;
+        font-size:13px;
 
-    font-size: 13px;
-  }
+    }
+
 }

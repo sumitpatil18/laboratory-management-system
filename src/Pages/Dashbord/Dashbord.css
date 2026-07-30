@@ -1,458 +1,255 @@
 /* ==========================================
-   GOOGLE FONT
-========================================== */
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
-
-
-/* ==========================================
-   GLOBAL RESET
-========================================== */
-
-*{
-
-    margin:0;
-
-    padding:0;
-
-    box-sizing:border-box;
-
-    font-family:"Poppins",sans-serif;
-
-}
-
-
-
-/* ==========================================
    DASHBOARD PAGE
 ========================================== */
 
+.dashboard-page {
 
-.dashboard-page{
+    min-height: 100vh;
 
-    min-height:100vh;
-
-    background:#f5f7fb;
+    background: #f5f7fb;
 
 }
-
-
 
 /* ==========================================
-   MAIN CONTENT AREA
-   Sidebar Width = 260px
+   MAIN CONTENT
 ========================================== */
 
+.headline {
 
-.headline{
+    margin-left: 260px;
 
-    margin-left:260px;
-
-    padding:35px;
+    padding: 35px;
 
 }
-
-
 
 /* ==========================================
    DASHBOARD HEADER
 ========================================== */
 
+.dashboard-header {
 
-.dashboard-header{
-
-    margin-bottom:30px;
-
-}
-
-
-
-.dashboard-header h1{
-
-    font-size:35px;
-
-    font-weight:600;
-
-    color:#1f2937;
-
-    margin-bottom:10px;
+    margin-bottom: 30px;
 
 }
 
+.dashboard-header h1 {
 
+    font-size: 35px;
 
-.subTitle-Dash{
+    font-weight: 600;
 
-    font-size:18px;
+    color: #1f2937;
 
-    color:#6b7280;
+    line-height: 1.2;
 
 }
 
+.subTitle-Dash {
 
+    margin-top: 8px;
+
+    font-size: 17px;
+
+    color: #6b7280;
+
+    line-height: 1.5;
+
+}
 
 /* ==========================================
-   CONTENT AREA
+   CONTENT
 ========================================== */
 
+.content {
 
-.content{
-
-    width:100%;
-
-}
-
-
-
-/* ==========================================
-   CARD DESIGN
-========================================== */
-
-
-.content .card,
-.card{
-
-    width:100%;
-
-    background:#ffffff;
-
-    border-radius:22px;
-
-    padding:30px;
-
-    box-shadow:
-
-    0 10px 30px rgba(0,0,0,0.08);
+    width: 100%;
 
 }
-
-
 
 /* ==========================================
    FILTER GRID
 ========================================== */
 
+.filter-container {
 
-.filter-container{
+    display: grid;
 
-    display:grid;
+    grid-template-columns: repeat(5, minmax(180px, 1fr));
 
-    grid-template-columns:repeat(5,1fr);
+    gap: 20px;
 
-    gap:20px;
-
-    align-items:end;
+    align-items: end;
 
 }
 
-
-
 /* ==========================================
-   COMPONENT WIDTH
+   GRID ITEMS
 ========================================== */
-
 
 .filter-name,
 .filter-age,
 .filter-blood-group,
 .filter-test-names,
 .date-picker,
-.filter-status,
+.filter-status {
+
+    width: 100%;
+
+}
+
+/* ==========================================
+   BUTTON LAYOUT
+   (Only Layout - Design comes from Button.css)
+========================================== */
+
 .search-button,
-.reset-button{
+.reset-button {
 
-    width:100%;
+    width: 100%;
+
+    min-height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    align-self: end;
 
 }
-
-
 
 /* ==========================================
-   INPUT DESIGN
+   LARGE DESKTOP
 ========================================== */
 
+@media (max-width: 1400px) {
 
-.input-field input,
-.selection-list select,
-.date-picker input{
+    .filter-container {
 
-
-    width:100%;
-
-    height:42px;
-
-    padding:0 14px;
-
-    border-radius:10px;
-
-    border:1px solid #d9dee8;
-
-    background:#ffffff;
-
-    color:#24324a;
-
-    font-size:14px;
-
-    outline:none;
-
-    transition:.3s;
-
-}
-
-
-
-.input-field input:focus,
-.selection-list select:focus,
-.date-picker input:focus{
-
-
-    border-color:#c31432;
-
-    box-shadow:
-
-    0 0 0 3px rgba(195,20,50,.1);
-
-}
-
-
-
-/* ==========================================
-   BUTTON DESIGN
-========================================== */
-
-
-.search-button button,
-.reset-button button{
-
-
-    width:100%;
-
-    height:42px;
-
-    border:none;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    color:white;
-
-    transition:.3s;
-
-}
-
-
-
-.search-button button{
-
-
-    background:
-
-    linear-gradient(
-
-        90deg,
-
-        #c31432,
-
-        #240b36
-
-    );
-
-}
-
-
-
-.reset-button button{
-
-
-    background:#6c7585;
-
-}
-
-
-
-.search-button button:hover,
-.reset-button button:hover{
-
-
-    transform:translateY(-2px);
-
-}
-
-
-
-/* ==========================================
-   LARGE LAPTOP
-========================================== */
-
-
-@media(max-width:1400px){
-
-
-    .filter-container{
-
-        grid-template-columns:repeat(4,1fr);
+        grid-template-columns: repeat(4, minmax(180px, 1fr));
 
     }
 
-
 }
-
-
 
 /* ==========================================
    LAPTOP
 ========================================== */
 
+@media (max-width: 1200px) {
 
-@media(max-width:1200px){
+    .headline {
 
-
-    .filter-container{
-
-        grid-template-columns:repeat(3,1fr);
+        padding: 30px;
 
     }
 
+    .filter-container {
+
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
+
+    }
 
 }
-
-
 
 /* ==========================================
    TABLET
 ========================================== */
 
+@media (max-width: 992px) {
 
-@media(max-width:992px){
+    .headline {
 
+        margin-left: 0;
 
-    .headline{
-
-        margin-left:0;
-
-        padding:25px;
+        padding: 25px;
 
     }
 
+    .dashboard-header h1 {
 
-
-    .dashboard-header h1{
-
-        font-size:30px;
+        font-size: 30px;
 
     }
 
+    .subTitle-Dash {
 
-
-    .filter-container{
-
-        grid-template-columns:repeat(2,1fr);
+        font-size: 16px;
 
     }
 
+    .filter-container {
+
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+
+    }
 
 }
-
-
 
 /* ==========================================
    MOBILE
 ========================================== */
 
+@media (max-width: 768px) {
 
-@media(max-width:768px){
+    .headline {
 
-
-    .headline{
-
-        padding:20px;
+        padding: 20px;
 
     }
 
+    .dashboard-header h1 {
 
-
-    .dashboard-header h1{
-
-        font-size:26px;
+        font-size: 26px;
 
     }
 
+    .subTitle-Dash {
 
-
-    .subTitle-Dash{
-
-        font-size:15px;
+        font-size: 15px;
 
     }
 
+    .filter-container {
 
+        grid-template-columns: 1fr;
 
-    .card{
-
-        padding:20px;
-
-        border-radius:18px;
+        gap: 16px;
 
     }
 
+    .search-button,
+    .reset-button {
 
-
-    .filter-container{
-
-        grid-template-columns:1fr;
-
-        gap:15px;
+        width: 100%;
 
     }
-
 
 }
-
-
 
 /* ==========================================
    SMALL MOBILE
 ========================================== */
 
+@media (max-width: 480px) {
 
-@media(max-width:480px){
+    .headline {
 
-
-    .headline{
-
-        padding:15px;
+        padding: 15px;
 
     }
 
+    .dashboard-header h1 {
 
-
-    .dashboard-header h1{
-
-        font-size:22px;
+        font-size: 22px;
 
     }
 
+    .subTitle-Dash {
 
-
-    .subTitle-Dash{
-
-        font-size:14px;
+        font-size: 14px;
 
     }
-
-
-
-    .card{
-
-        padding:15px;
-
-    }
-
 
 }
