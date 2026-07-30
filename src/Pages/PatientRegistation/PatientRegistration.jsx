@@ -9,6 +9,10 @@ import SelectionList from "../../Components/SelectionList/SelectionList";
 import { TitleName } from "../../Data/SelectionList";
 import RadioBTN from "../../Components/RadioBTN/RadioBTN";
 import { genderOption } from "../../Data/RadioButton";
+import { testNames } from "../../Data/SelectionList";
+import { testNamesSelectPatient } from "../../Data/TextSelectionPatient";
+import MultiSelectDropdown from "../../Components/MultiSelectDropdown/MultiSelectDropdown";
+import Button from "../../Components/Button/Button";
 
 export default function PatientRegistration() {
   const [title, setTitle] = useState("Select");
@@ -87,6 +91,21 @@ export default function PatientRegistration() {
                 type="tel"
                 placeholder="Enter Mobile Number"
                 className="patient-mobile"
+              />
+
+              <InputField
+                label="Referring Doctor"
+                type="text"
+                placeholder="Enter Dr Name"
+                className="dr-name"
+              />
+
+              <MultiSelectDropdown options={testNamesSelectPatient} label="Select Test" />
+
+              <Button
+              type="button"
+              info="Registration"
+              className="patient-registration"
               />
             </div>
           </Card>
