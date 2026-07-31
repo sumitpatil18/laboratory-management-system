@@ -1,34 +1,26 @@
 import { Routes, Route } from "react-router-dom";
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from './assets/vite.svg'
-// import heroImg from './assets/hero.png'
-// import './App.css'
-//import Login from "./Components/Login/Login";
-//import Merge from "./Pages/ManageLaboratory/Merge";
-//import CreateLaboratory from "./Pages/CreateLaboratory/CreateLaboratory";
-//import ManageLaboratory from "./Pages/ManageLaboratory/ManageLaboratory";
-//import Sidebar from "./Components/Sidebar/Sidebar";
-//import StaffManage from "./Pages/StaffManage/StaffManage";
+
+import Login from "./Pages/Login/Login";
+
+import ManageLaboratory from "./Pages/ManageLaboratory/ManageLaboratory";
+
 import Dashbord from "./Pages/Dashbord/Dashbord";
-import PatientRegistation from "./Pages/PatientRegistation/PatientRegistration";
 
 function App() {
   return (
-    // <Routes>
-    //   <Route path="/" element={<ManageLaboratory />} />
-
-    //   <Route path="createLaboratory" element={<CreateLaboratory />} />
-
-    //   <Route path="/staffManage" element={<StaffManage />} />
-    // </Routes>
-
     <Routes>
-        <Route path="/" element={<Dashbord/>}/>
+      {/* Login Page */}
 
-        <Route path="patientregistation" element={<PatientRegistation/>}/>
+      <Route path="/" element={<Login />} />
+
+      {/* Admin Page */}
+
+      <Route path="/admin/managelaboratory" element={<ManageLaboratory />} />
+
+      {/* Laboratory User Page */}
+
+      <Route path="/laboratory/dashboard" element={<Dashbord />} />
     </Routes>
-    
   );
 }
 
