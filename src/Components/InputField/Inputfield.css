@@ -1,157 +1,105 @@
-/* ==========================================
-   INPUT FIELD CONTAINER
-========================================== */
+/* =========================================
+   INPUT CONTAINER
+========================================= */
 
-.input-field{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 6px;
+.input-field {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
 }
 
-/* ==========================================
+/* =========================================
    LABEL
-========================================== */
+========================================= */
 
-.input-field label{
-    font-size: 12px;
-    font-weight: 600;
-    color: #374151;
-    line-height: 1.4;
+.input-field label {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #374151;
 }
 
-/* ==========================================
-   INPUT FIELD
-========================================== */
+/* =========================================
+   INPUT
+========================================= */
 
-.input-field input{
-    width: 100%;
-    height: 40px;
+.input-field input {
+  width: 100%;
 
-    padding: 10px 12px;
+  height: 46px;
 
-    border: 1px solid #dbe2ea;
-    border-radius: 10px;
+  padding: 0 14px;
 
-    background: #f9fbfd;
+  border: 1px solid #d1d5db;
 
-    color: #2d3436;
-    font-size: 13px;
-    font-weight: 400;
-    font-family: inherit;
+  border-radius: 10px;
 
-    outline: none;
-    appearance: none;
+  background: #ffffff;
 
-    transition:
-        border-color 0.3s ease,
-        box-shadow 0.3s ease,
-        background-color 0.3s ease;
+  color: #1f2937;
 
-    box-sizing: border-box;
+  font-size: 14px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-/* ==========================================
+/* =========================================
    PLACEHOLDER
-========================================== */
+========================================= */
 
-.input-field input::placeholder{
-    color: #9ca3af;
-    font-size: 12px;
-    font-weight: 400;
+.input-field input::placeholder {
+  color: #9ca3af;
+
+  font-size: 14px;
 }
 
-/* ==========================================
-   FOCUS
-========================================== */
-
-.input-field input:focus{
-    background: #ffffff;
-    border-color: #c31432;
-    box-shadow: 0 0 0 3px rgba(195,20,50,0.12);
-}
-
-/* ==========================================
+/* =========================================
    HOVER
-========================================== */
+========================================= */
 
-.input-field input:hover{
-    border-color: #c7d2de;
+.input-field input:hover {
+  border-color: #9ca3af;
 }
 
-/* ==========================================
-   PASSWORD
-========================================== */
+/* =========================================
+   FOCUS
+========================================= */
 
-.input-field input[type="password"]{
-    letter-spacing: 0.5px;
+.input-field input:focus {
+  border-color: #c31432;
+
+  box-shadow: 0 0 0 3px rgba(195, 20, 50, 0.15);
 }
 
-/* ==========================================
-   DISABLED
-========================================== */
+/* =========================================
+   MOBILE
+========================================= */
 
-.input-field input:disabled{
-    background: #eef2f7;
-    color: #9ca3af;
-    cursor: not-allowed;
-    opacity: 0.8;
+@media (max-width: 768px) {
+  .input-field input {
+    height: 44px;
+  }
 }
 
-/* ==========================================
-   AUTOFILL
-========================================== */
+@media (max-width: 480px) {
+  .input-field input {
+    height: 42px;
 
-.input-field input:-webkit-autofill{
-    -webkit-box-shadow: 0 0 0 1000px #f9fbfd inset;
-    -webkit-text-fill-color: #2d3436;
-}
+    font-size: 13px;
+  }
 
-/* ==========================================
-   RESPONSIVE - TABLET
-========================================== */
-
-@media (max-width:768px){
-
-    .input-field label{
-        font-size: 12px;
-    }
-
-    .input-field input{
-        height: 40px;
-        font-size: 12px;
-        padding: 10px 12px;
-    }
-
-    .input-field input::placeholder{
-        font-size: 12px;
-    }
-
-}
-
-/* ==========================================
-   RESPONSIVE - MOBILE
-========================================== */
-
-@media (max-width:480px){
-
-    .input-field{
-        gap: 5px;
-    }
-
-    .input-field label{
-        font-size: 11px;
-    }
-
-    .input-field input{
-        height: 38px;
-        padding: 8px 10px;
-        font-size: 12px;
-        border-radius: 8px;
-    }
-
-    .input-field input::placeholder{
-        font-size: 11px;
-    }
-
+  .input-field label {
+    font-size: 13px;
+  }
 }
